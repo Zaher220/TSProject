@@ -46,6 +46,7 @@ HEADERS  += \
     tsanalitics.h \
     inputs/tstableview.h \
     ui_tsprintview.h \
+    ui_tsprogressdialog.h \
     tstempanalitic.h \
     extremum.h \
     tsrealcalc.h \
@@ -62,7 +63,8 @@ FORMS    += \
     dialog.ui \
     tsresultsview.ui \
     tsvolsignalwidget.ui \
-    tsprintview.ui
+    tsprintview.ui \
+    tsprogressdialog.ui
 
 RESOURCES += \
     iconResourse.qrc
