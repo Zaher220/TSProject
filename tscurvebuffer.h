@@ -38,11 +38,9 @@ public:
     void setVolumeColibration(int c,bool realtime);
     void setValues(int* volume,int* tin,int* tout, int n);
     void append(int v, int tI, int tO, bool realtime = true);
-    void setScreenLimit(int sl);
     int startIndex();
     void setStartIndex(int s);
     void setEnd(int n);
-    int screenLimit();
     int* getTempInInterval();
     int* getTempOutInterval();
     int* getVolumeInterval();
@@ -67,7 +65,6 @@ signals:
 public slots:
     void updateAvData(int avgTempIn, int avgTempOut, int avgDo, int ChD);
 private:
-    tsrealcalc* rcalc;
     int ts_volume[18000];
     int ts_tempIn[18000];
     int ts_tempOut[18000];
@@ -76,9 +73,6 @@ private:
     int ts_volumeColibration;
     int ts_screenLimit;
     int ts_startIndex;
-    int ts_mi_in_cnt;
-    int ts_mi_out_cnt;
-    int ts_check;
     int max_v,maxc_v,min_v,minc_v;
     int ts_minTempIn;
     int ts_maxTempIn;

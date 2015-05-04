@@ -118,9 +118,6 @@ void TSCurveBuffer::setVolumeColibration(int c, bool realtime = true){
         ts_volumeColibration = c;
 }
 
-void TSCurveBuffer::setScreenLimit(int sl){
-    ts_screenLimit =sl;
-}
 
 int TSCurveBuffer::startIndex(){
     return ts_startIndex;
@@ -132,10 +129,6 @@ void TSCurveBuffer::setStartIndex(int s){
 
 void TSCurveBuffer::setEnd(int n){
     ts_end = n;
-}
-
-int TSCurveBuffer::screenLimit(){
-    return ts_screenLimit;
 }
 
 int* TSCurveBuffer::getTempInInterval(){

@@ -15,6 +15,7 @@
 #include "ui_tsprintview.h"
 #include "tsusbdatareader.h"
 #include "volumesolver.h"
+#include <QTime>
 namespace Ui {
     class TSView;
     class TSProgressDialog;
@@ -41,7 +42,6 @@ public slots:
     void savePatientProfile();
     void rejectPatientProfile();
     void calibrateVolume();
-    void calibrateTemperature();
     void rejectColibration();
     void threadFinished();
     void startExam();
@@ -131,6 +131,7 @@ private:
     QSqlDatabase patientsConnection;
     QSqlDatabase examinationsConnection;
     bool isInitialized;
+    QTime myTimer;
 };
 
 #endif // TSVIEW_H

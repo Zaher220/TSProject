@@ -29,6 +29,12 @@ VolumeSolver::VolumeSolver(QVector<int> volume, QVector<int> tempin, QVector<int
     qDebug()<<"MaxExpirationSpeed"<<getMaxExpirationSpeed();
     qDebug()<<"AverageInspirationTempetature"<<getAverageInspirationTempetature();
     qDebug()<<"AverageExpirationTempetature"<<getAverageExpirationTempetature();
+    FILE* out;
+    out=fopen("valume.csv","w");
+    for(int i=0;i<volume.size();i++){
+        fprintf(out,"%d\n",volume.at(i));
+    }
+    fclose(out);
 }
 
 QVector<QPoint> VolumeSolver::getSignal(){
