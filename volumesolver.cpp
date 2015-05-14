@@ -1,5 +1,5 @@
 #include "volumesolver.h"
-
+#define M_PI 3.14159265358
 
 VolumeSolver::VolumeSolver(QVector<int> volume, QVector<int> tempin, QVector<int> tempout){
     QPoint point;
@@ -245,7 +245,7 @@ void VolumeSolver::deleteEqualNoisePoints(){
         return;
     int koef = 20;
     for(int i=0;i<prepared_data.size()-1;i++)
-        if ( fabs(prepared_data.at(i+1).y() - prepared_data.at(i).y()) < koef &&
+        if ( fabs(static_cast<double>(prepared_data.at(i+1).y() - prepared_data.at(i).y())) < koef &&
              prepared_data.at(i+1).y() > 100 &&
              prepared_data.at(i).y()>100 ){
             qDebug()<<"y1="<<prepared_data.at(i+1).y()<<"y2="<<prepared_data.at(i).y();

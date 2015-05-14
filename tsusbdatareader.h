@@ -7,6 +7,7 @@
 #include "QDebug"
 #include "tscurvebuffer.h"
 #include "extremum.h"
+#include <QElapsedTimer>
 class TSUsbDataReader : public QObject
 {
     Q_OBJECT
