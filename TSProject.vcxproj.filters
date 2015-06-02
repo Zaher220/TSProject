@@ -242,12 +242,6 @@
     <ClInclude Include="tools\tsvalidationtools.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ui_tsprintview.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ui_tsprogressdialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="volumesolver.h">
       <Filter>Header Files</Filter>
     </ClInclude>

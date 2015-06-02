@@ -67,7 +67,9 @@ TSController::TSController(QWidget *parent):QMainWindow(parent),ui(new Ui::TSVie
     {
         QMessageBox msgBox(this);
         msgBox.setWindowTitle(tr("Ошибка"));
-        msgBox.setText(tr("Произошла ошибка.\nОбратитесь к разработчикам.\nКод: 00001.\nПрограмма будет завершена."));
+		QString error = QString("Произошла ошибка.\nОбратитесь к разработчикам.\nКод: 00001.\nПрограмма будет завершена.")+patientsConnection.lastError().text().toStdString().c_str();
+
+		msgBox.setText(error);
         msgBox.exec();
         QApplication::exit(0);
     }
