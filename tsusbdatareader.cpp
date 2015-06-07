@@ -41,7 +41,8 @@ bool TSUsbDataReader::initDevice(){
 			char ss[]="usb3000";
 			char *s = ss;
 			PCHAR* p =reinterpret_cast<PCHAR*>(s);
-			pModule = static_cast<IRTUSB3000 *> (RtCreateInstance(*p));
+			wchar_t  str[] = L"usb3000";
+			pModule = static_cast<IRTUSB3000 *> (RtCreateInstance((PCHAR)str));
             if(pModule == NULL){
                 qDebug() << "Can`t create usb3000 instance";
                 return false;
